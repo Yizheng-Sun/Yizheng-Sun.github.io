@@ -74,3 +74,6 @@
 
 .about-research-interests{margin:0;padding-left:22px;line-height:1.75}
 .about-research-interests li+li{margin-top:12px}
+
+.homepage-welcome{font-size:clamp(26px,3vw,36px);font-weight:700;line-height:1.25;letter-spacing:-1px;color:#181a1c;margin:0 0 48px;text-wrap:balance}
+@media(max-width:700px){.homepage-welcome{margin-bottom:32px;letter-spacing:-.6px}}
