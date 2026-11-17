@@ -61,7 +61,7 @@
 /* A persistent, quiet section menu with one clear active location. */
 .site-layout{display:grid;grid-template-columns:184px minmax(0,1fr);gap:48px;max-width:1280px;margin:0 auto;padding:0 48px}
 .site-layout>.page-wrap{width:100%;max-width:none;padding-left:0;padding-right:0;margin:0;min-width:0}
-.section-sidebar{position:sticky;top:0;align-self:start;height:100vh;height:100dvh;display:flex;flex-direction:column;justify-content:center;padding:28px 0;min-width:0}
+.section-sidebar{position:sticky;top:28px;align-self:start;margin-top:var(--sidebar-offset,142px);min-width:0}
 .section-menu{display:flex;flex-direction:column;gap:8px;background:#fafafa;border:1px solid #e8e8e8;border-radius:12px;padding:18px 10px;max-height:calc(100vh - 56px);overflow-y:auto}
 .section-menu a{display:block;padding:13px 14px;border-left:3px solid transparent;border-radius:5px;color:#4a4a4a;font-size:15px;font-weight:600;line-height:1.4;letter-spacing:.1px}
 .section-menu a:hover{color:#303030;background:#f0f0f0}

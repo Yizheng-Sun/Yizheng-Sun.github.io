@@ -3,9 +3,19 @@
  if(location.pathname!=='/'&&location.pathname!=='/index.html')return;
  const links=[...document.querySelectorAll('.section-menu [data-section]')];
  const sections=links.map(link=>({link,target:document.querySelector(link.dataset.section)})).filter(item=>item.target);
+ const sidebar=document.querySelector('.section-sidebar');
+ const layout=document.querySelector('.site-layout');
+ const heading=document.querySelector('.about-bio-heading');
+ function alignSidebar(){
+  if(innerWidth>860&&sidebar&&layout&&heading){
+   const offset=Math.max(0,heading.getBoundingClientRect().top-layout.getBoundingClientRect().top);
+   sidebar.style.setProperty('--sidebar-offset',offset+'px');
+  }
+ }
  let pending=false;
  function update(){
   pending=false;
+  alignSidebar();
   const threshold=innerWidth<=860?110:80;
   let active=sections[0];
   for(const item of sections)if(item.target.getBoundingClientRect().top<=threshold)active=item;
